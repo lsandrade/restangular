@@ -1,4 +1,4 @@
-var app = angular.module('restangular', ['ngRoute']);
+var app = angular.module('RestAngular', ['ngRoute', 'restangular']);
 
 app
 //Routing
