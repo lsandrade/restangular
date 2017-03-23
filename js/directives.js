@@ -1,0 +1,6 @@
+app
+.directive('integer', function() {
+})
+
+
+;
