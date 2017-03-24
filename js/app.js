@@ -8,6 +8,10 @@ app
             templateUrl: "templates/home.html",
             controller: "HomeCtrl"
         })
+        .when('/service',{
+            templateUrl: "templates/service.html",
+            controller: "ServiceCtrl"
+        })
         .otherwise({
             redirectTo: '/'
         });

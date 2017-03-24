@@ -36,8 +36,12 @@ app
         console.log(user);
     });
 
-    // Just ONE GET to /accounts/123/buildings
-//    Restangular.one('accounts', 123).getList('buildings')
+
+})
+
+.controller('ServiceCtrl', function(Users){
+    console.log(Users.one(2).get().$object);
+    
 })
 
 ;
