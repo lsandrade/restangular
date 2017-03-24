@@ -2,11 +2,11 @@ app
 
 .controller('HomeCtrl', function ($scope, Restangular) {
     $scope.msg = "Hello";
-    var url = 'http://127.0.0.1/';
 
     // First way of creating a Restangular object.
     // Just saying the base URL
-    var baseSnippets = Restangular.all('snippets/');
+    var baseSnippets = Restangular.all('snippets');
+    console.log(baseSnippets);
 
     // This will query /snippets and return a promise
     baseSnippets.getList().then(function(snippets) {
@@ -18,7 +18,7 @@ app
     // Does GET /snippets
     // Returns an empty array by default. Once a value is returned from the server
     // that array is filled with those values. So you can use this in your template
-    $scope.snippets = Restangular.all('snippets/')
+    $scope.snippets = Restangular.all('snippets')
         .getList().$object;
     console.log($scope.snippets);
 
