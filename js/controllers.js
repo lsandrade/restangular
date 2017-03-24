@@ -46,13 +46,13 @@ app
     // post data to users
     //Users.post({username:"fulano"+Math.abs(Math.random())});
 
-    Users.getList().then(
+    /*Users.getList().then(
         function(users){
             userPut = users[1];
             userPut.username="Not admin";
             userPut.put();
         }
-    );
+    );*/
 
 })
 
