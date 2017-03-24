@@ -5,35 +5,31 @@ app
 
     // First way of creating a Restangular object.
     // Just saying the base URL
-    var baseSnippets = Restangular.all('snippets');
-    console.log(baseSnippets);
+    var baseUsers = Restangular.all('users/');
 
     // This will query /snippets and return a promise
-    baseSnippets.getList().then(function(snippets) {
-      $scope.allSnippets = snippets;
-      console.log($scope.allSnippets);
+    baseUsers.getList().then(function(users) {
+      $scope.allUsers= users;
     });
 
 
     // Does GET /snippets
     // Returns an empty array by default. Once a value is returned from the server
     // that array is filled with those values. So you can use this in your template
-    $scope.snippets = Restangular.all('snippets')
+    $scope.snippets = Restangular.all('users')
         .getList().$object;
     console.log($scope.snippets);
 
-    /* Desconsidera daqui pra baixo
-    var newAccount = {name: "Luan's account"};
+    var newUser = {username: "admin"+ Math.random()};
 
     // POST /accounts
-    baseAccounts.post(newAccount);
-
+    baseUsers.post(newUser);
+/*
     // GET to URL
     Restangular.allUrl('googlers', url).getList();
 
     // GET to URL/1
     Restangular.oneUrl('googlers', url+'1').get();
-
 */
 })
 
