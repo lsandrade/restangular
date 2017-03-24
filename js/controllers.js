@@ -40,8 +40,20 @@ app
 })
 
 .controller('ServiceCtrl', function(Users){
+    // get one user wit id = 2
     console.log(Users.one(2).get().$object);
-    
+
+    // post data to users
+    //Users.post({username:"fulano"+Math.abs(Math.random())});
+
+    Users.getList().then(
+        function(users){
+            userPut = users[1];
+            userPut.username="Not admin";
+            userPut.put();
+        }
+    );
+
 })
 
 ;

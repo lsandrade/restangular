@@ -1,7 +1,7 @@
 app
 
 .factory('Users', function(Restangular){
-    return Restangular.service('users');
+    return Restangular.service('users/');
 })
 
 ;
